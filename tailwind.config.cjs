@@ -7,10 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'rich-black': '#203F3C',
-        'gold-crayola': '#EBC991',
-        'fire-opal': '#E4504B',
-        'light-blue': '#BDD9DF'
+        "firmes-black": "#111111"
       },
       fontFamily: {
         'big-shoulder': ['big-shoulder'],
