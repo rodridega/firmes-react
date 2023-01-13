@@ -26,12 +26,7 @@ export const Header = () => {
 
   const startTime = () => {
     let today = new Date();
-    /* this.hour = today.getHours();
-    this.minutos = today.getMinutes();
-    //Add a zero in front of numbers<10
-    this.minutos = this.checkTime(this.minutos);
 
-    this.zodiac = getZodiac(month, day); */
     setDate({
       day: today.getDate(),
       month: today.getMonth(),
@@ -77,12 +72,19 @@ export const Header = () => {
           <h3 class="text-2xl md:text-3xl">
             {coords?.latitud}/{coords?.longitud}
           </h3>
-          <h3 class="text-2xl md:text-3xl">
-            {date.hour}:{date.minutes}
-          </h3>
+          <div className="flex gap-4">
+            <h2 class="text-2xl md:text-3xl">
+              {" "}
+              {date.day}/{date.month + 1}/{date.year}{" "}
+            </h2>
+            <h2 class="text-2xl md:text-3xl">
+              {date.hour}:{date.minutes}
+            </h2>
+
+          </div>
         </div>
       </div>
-      <div class="flex">
+      {/* <div class="flex">
         <h2 class="mx-2 text-2xl">
           {date.hour}:{date.minutes}
         </h2>
@@ -90,7 +92,7 @@ export const Header = () => {
           {" "}
           {date.day}/{date.month + 1}/{date.year}{" "}
         </h2>
-      </div>
+      </div> */}
     </header>
   );
 };

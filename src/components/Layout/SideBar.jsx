@@ -30,7 +30,7 @@ const links = [
 
 export const SideBar = () => {
   return (
-    <nav class="flex justify-end m-20 z-10 absolute right-0 bottom-20">
+    <nav class="flex justify-end m-10 z-10 absolute right-0 bottom-20">
       <ul class="text-white text-4xl text-right">
         {links.map((link) => {
           return (

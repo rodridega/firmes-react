@@ -47,7 +47,7 @@ function App() {
     <div>
       <MouseTracker />
       <RouterProvider router={router} />
-      {/* <FirmesLayout /> */}
+
     </div>
   );
 }
