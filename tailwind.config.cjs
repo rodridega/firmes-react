@@ -7,11 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "firmes-black": "#111111"
+        "firmes-black": "#111111",
+        "firmes-violet": "#8B56FA"
       },
       fontFamily: {
-        'big-shoulder': ['big-shoulder'],
-        'roboto': ['roboto']
+        'avant': ['avant'],
       },
     },
   },

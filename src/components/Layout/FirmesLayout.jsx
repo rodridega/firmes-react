@@ -11,11 +11,12 @@ export const FirmesLayout = () => {
   return (
     <div className="h-full">
       <Header />
-      <main class="w-screen max-w-full flex flex-col">
-        <SideBar/>
+      <main class="w-screen max-w-full flex">
+        
         <Outlet />
+        <SideBar/>
       </main>
-      
+      <MessageBar />
     </div>
   );
 };

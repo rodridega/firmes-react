@@ -84,7 +84,7 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      {/* <div class="flex">
+      <div class="flex">
         <h2 class="mx-2 text-2xl">
           {date.hour}:{date.minutes}
         </h2>
@@ -92,7 +92,7 @@ export const Header = () => {
           {" "}
           {date.day}/{date.month + 1}/{date.year}{" "}
         </h2>
-      </div> */}
+      </div>
     </header>
   );
 };

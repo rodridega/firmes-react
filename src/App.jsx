@@ -4,6 +4,7 @@ import "./App.css";
 import { ErrorPage } from "./components/Layout/ErrorPage";
 import { FirmesLayout } from "./components/Layout/FirmesLayout";
 import { MouseTracker } from "./components/UI/MouseTracker";
+import { AboutUs } from "./pages/About Us/AboutUs";
 import { ChillLayout } from "./pages/Chill/ChillLayout";
 import { CreatorsLayout } from "./pages/Creators/CreatorsLayout";
 import { HomeLayout } from "./pages/Home/HomeLayout";
@@ -25,6 +26,10 @@ function App() {
         {
           path: "work",
           element: <WorkLayout />,
+        },
+        {
+          path: "about-us",
+          element: <AboutUs />,
         },
         {
           path: "skills",
