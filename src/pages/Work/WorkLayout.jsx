@@ -1,12 +1,12 @@
 import React from "react";
-import { WorkGallery, WorkInfo, WorkPreview } from "./index";
+import { WorKPicker } from "./index";
+
 
 export const WorkLayout = () => {
+
   return (
-    <div className=" top-1/4 p-8 bg-firmes-black">
-      <WorkPreview />
-      <WorkInfo />
-      <WorkGallery />
+    <div className="w-full py-16">
+      <WorKPicker />
     </div>
   );
 };

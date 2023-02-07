@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getZodiac } from "../../helpers/getZodiac";
 
+
 export const Header = () => {
   const [date, setDate] = useState({
     day: null,
@@ -60,39 +61,57 @@ export const Header = () => {
   }, []);
 
   return (
-    <header class="flex flex-col text-white z-10 w-full p-4 bg-firmes-black">
-      <div class="flex flex-col md:flex-row items-center">
-        <div class="w-full md:w-96 md:mr-36">
-          <Link to={"/"}>
-            <img src="/src/assets/logo.png" alt="logo" class="w-full" />
-          </Link>
-        </div>
-        <div class="flex justify-between w-full">
-          <h3 class="text-2xl md:text-3xl"> {zodiac} </h3>
-          <h3 class="text-2xl md:text-3xl">
-            {coords?.latitud}/{coords?.longitud}
-          </h3>
-          <div className="flex gap-4">
-            <h2 class="text-2xl md:text-3xl">
-              {" "}
-              {date.day}/{date.month + 1}/{date.year}{" "}
-            </h2>
-            <h2 class="text-2xl md:text-3xl">
-              {date.hour}:{date.minutes}
-            </h2>
+    <header className="hidden lg:flex flex-col text-white z-10 w-full p-4 bg-firmes-black">
+      <nav>
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-96 md:mr-36">
+            <Link to={"/"}>
+              <img src="/src/assets/logo.png" alt="logo" className="w-full" />
+            </Link>
+          </div>
+          <div className="flex justify-between w-full">
+            <div className="flex ">
+              <div className="w-8 flex justify-center items-center">
+                <img src="/src/assets/Ellipse 1.png" />
+              </div>
+              <div className="w-8 flex justify-center items-center">
+                <img src="/src/assets/Subtract.png" />
+              </div>
+              <div className="w-8 flex justify-center items-center">
+                <img src="/src/assets/Ellipse 2.png" />
+              </div>
+              
+              <h3 className="text-2xl mx-4 md:text-3xl "> {zodiac?.sign} </h3>
+              <div className="w-8 flex justify-center items-center">
+                <img src={zodiac?.img} />
+              </div>
+            </div>
+            <h3 className="text-2xl md:text-3xl">
+              {/* {coords?.latitud}/{coords?.longitud} */}
+              N4°37'56.656''/W74°4'33.145''
+            </h3>
+            <div className="flex gap-4">
+              <h2 className="text-2xl md:text-3xl">
+                {" "}
+                {date.day}/{date.month + 1}/{date.year}{" "}
+              </h2>
+              <h2 className="text-2xl md:text-3xl">
+                {date.hour}:{date.minutes}
+              </h2>
 
+            </div>
           </div>
         </div>
-      </div>
-      <div class="flex">
-        <h2 class="mx-2 text-2xl">
-          {date.hour}:{date.minutes}
-        </h2>
-        <h2 class="text-2xl">
-          {" "}
-          {date.day}/{date.month + 1}/{date.year}{" "}
-        </h2>
-      </div>
+        {/* <div className="flex">
+          <h2 className="mx-2 text-2xl">
+            {date.hour}:{date.minutes}
+          </h2>
+          <h2 className="text-2xl">
+            {" "}
+            {date.day}/{date.month + 1}/{date.year}{" "}
+          </h2>
+        </div> */}
+      </nav>
     </header>
   );
 };
