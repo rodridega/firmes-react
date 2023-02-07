@@ -1,23 +1,20 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { CreatorOfMonth } from "../../pages/Home/CreatorOfMonth";
-import { Header } from "./Header";
-import { MessageBar } from "../../pages/Home/MessageBar";
-import { SideBar } from "./SideBar";
+import { Header,SideBar,HeaderMobile } from "./index";
 
 export const FirmesLayout = () => {
 
 
   return (
     <div className="h-full">
-      <Header />
-      <main class="w-screen max-w-full flex">
-        
+      
+        <Header />
+        <HeaderMobile />
+      <main className="w-screen max-w-full flex justify-center items-center px-4">
         <Outlet />
-        <SideBar/>
+        <SideBar />
       </main>
-      <MessageBar />
+      {/* <MessageBar /> */}
     </div>
   );
 };
- 

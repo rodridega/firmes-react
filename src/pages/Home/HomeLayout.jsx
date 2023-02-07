@@ -4,11 +4,13 @@ import { CreatorOfMonth } from './CreatorOfMonth'
 import { ImagesHomeWrapper } from './ImagesHomeWrapper'
 
 export const HomeLayout = () => {
+
+
   return (
-    <div className='w-5/6'>
+    <div className='w-full py-16'>
       {/*  <CreatorOfMonth /> */}
-      {/*  <MessageBar /> */}
       <ImagesHomeWrapper />
+      <MessageBar />
     </div>
   )
 }

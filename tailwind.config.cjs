@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors: {
         "firmes-black": "#111111",
-        "firmes-violet": "#8B56FA"
+        "firmes-violet": "#8B56FA",
+        "firmes-form": "#f5f4f1"
       },
       fontFamily: {
         'avant': ['avant'],

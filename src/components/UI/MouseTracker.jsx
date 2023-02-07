@@ -3,27 +3,29 @@ import React, { useEffect } from "react";
 export const MouseTracker = () => {
   useEffect(() => {
     const tracker = document.querySelector(".tracker");
-    console.log(tracker);
     document.body.addEventListener("mousemove", (e) => {
+      if(!tracker) {
+        return
+      }
       tracker.style.left = `${e.clientX}px`;
       tracker.style.top = `${e.clientY}px`;
     });
   }, []);
 
   return (
-    <div class="tracker">
+    <div className="hidden lg:tracker">
       <svg
         version="1.1"
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         x="0px"
         y="0px"
         width="32px"
         height="32px"
         viewBox="0 0 32 32"
-        enable-background="new 0 0 32 32"
-        xml:space="preserve"
+        enableBackground="new 0 0 32 32"
+        xmlSpace="preserve"
       >
         <polygon opacity="0.8" fill="#A4FFBE" points="2,31 29,31 16,6 15,6 " />
         <g>
@@ -46,16 +48,16 @@ export const MouseTracker = () => {
         <path
           fill="none"
           stroke="#4D5152"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
           d="M8.5,8.5c0,0,1-6,7-6s7,6,7,6s-1,3-7,3
 	S8.5,8.5,8.5,8.5z"
         />
         <path
           fill="none"
           stroke="#4D5152"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
           d="M22.5,8.5c0,0,5,1,6,3s-4,6-13,6s-14-4-13-6
 	s6-3,6-3"
         />

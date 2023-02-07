@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const links = [
   /* {
@@ -37,16 +37,22 @@ const links = [
 ];
 
 export const SideBar = () => {
+
+
+  let activeStyle = {
+    color: "#8b56fa",
+  };
+
   return (
-    <nav class="flex justify-end m-10 z-10 absolute right-0 bottom-20 w-5/6">
-      <ul class="text-white text-4xl text-right">
+    <nav className="hidden lg:flex justify-end m-10 z-20 absolute right-0 bottom-20 w-1/6">
+      <ul className="text-white text-4xl text-right">
         {links.map((link) => {
           return (
             <li
               key={link.link}
-              className="transition-all hover:text-purple-700"
+              className="transition-all font-extrabold hover:text-purple-700 "
             >
-              <Link to={link.to}>{link.link}</Link>
+              <NavLink to={link.to}>{link.link}</NavLink>
             </li>
           );
         })}
